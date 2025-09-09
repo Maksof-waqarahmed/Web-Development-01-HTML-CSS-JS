@@ -214,3 +214,178 @@ flowchart TB
   E --> F[Optimized Machine Code]
   F --> CPU
 ```
+
+---
+
+## ❌ Errors in Programming
+
+Errors are problems in code that stop a program from running correctly. To make programs work, these errors must be fixed.
+
+### 🧩 Types of Errors
+
+1. **Syntax Error**
+   Happens when the code breaks grammar rules of the programming language.
+   🔎 Detected at compile time or when running code.
+   ✅ Example: Missing semicolon, wrong brackets.
+
+   ```js
+   // ❌ Syntax Error
+   console.log("Hello World"  // missing closing bracket
+   ```
+
+2. **Runtime Error**
+   Happens while the program is running. The program compiles but then crashes or behaves unexpectedly.
+   ✅ Example: Division by zero, using undefined variables.
+
+   ```js
+   // ❌ Runtime Error
+   let x = 10 / 0; // Infinity
+   console.log(undefinedVar); // ReferenceError
+   ```
+
+3. **Logical Error**
+   The program runs without crashing, but the output is wrong due to incorrect logic.
+   ✅ Example: Wrong formula or condition.
+
+   ```js
+   // ❌ Logical Error
+   let marks = 50;
+   if (marks > 100) { // wrong condition
+       console.log("Pass");
+   } else {
+       console.log("Fail");
+   }
+   ```
+
+📊 **Mermaid Diagram: Error Types**
+
+```mermaid
+graph TD
+A[Errors in Programming] --> B[Syntax Error]
+A --> C[Runtime Error]
+A --> D[Logical Error]
+```
+
+---
+
+## 🧰 Integrated Development Environment (IDE)
+
+An IDE is software that provides all tools in one place to write, test, debug, and manage code.
+
+### ✨ Key Features
+
+* 🖍️ **Syntax Highlighting** → Highlights keywords, variables, and functions.
+* 🧠 **Code Completion (IntelliSense)** → Suggests code snippets & methods.
+* ❌ **Error Detection** → Detects mistakes in real time.
+* 📁 **Project Management** → Organizes project files and folders.
+
+💻 Example IDEs: **VS Code, IntelliJ IDEA, PyCharm, Eclipse**
+
+---
+
+## 🌐 What is JavaScript?
+
+JavaScript (JS) is a **lightweight, interpreted / just-in-time compiled programming language**.
+
+* Used mostly in **web development**
+* Can also run outside browsers → **Node.js, Apache CouchDB, Adobe Acrobat**
+* Supports **first-class functions** (functions can be stored in variables, passed around, etc.)
+
+### 🔧 Key Features
+
+* Prototype-based
+* Multi-paradigm → Object-Oriented, Imperative, Declarative, Functional
+* Single-threaded & dynamic
+
+---
+
+## 🔁 Execution Process of JavaScript
+
+```mermaid
+graph TD
+A[High-Level JavaScript Code] --> B[JIT Compiler parses & optimizes]
+B --> C[Intermediate / Optimized Bytecode]
+C --> D[Machine Code Execution by JS Engine]
+```
+
+---
+
+## 💡 Why Learn JavaScript?
+
+JavaScript is everywhere in the tech industry:
+
+* 🌐 Web Development (Frontend + Backend)
+* 📱 Mobile Apps (React Native, Ionic)
+* 🖥 Desktop Apps (Electron)
+* 🎮 Game Development
+* 🤖 AI & Machine Learning (TensorFlow\.js)
+
+---
+
+## ⚡ Types of JavaScript
+
+### 🖥 Client-Side JavaScript
+
+* Runs in browsers
+* Handles **DOM manipulation, events, UI updates**
+
+```js
+// Example: Client-Side JavaScript
+const button = document.getElementById("clickMe");
+button.addEventListener("click", () => alert("Button Clicked!"));
+```
+
+### 🖧 Server-Side JavaScript
+
+* Runs on servers
+* Handles **requests, responses, database queries**
+* Common tool: **Node.js**
+
+```js
+// Example: Server-Side JavaScript (Node.js)
+const http = require("http");
+http.createServer((req, res) => {
+  res.end("Hello from Node.js");
+}).listen(3000);
+```
+
+---
+
+## 🕰️ History of JavaScript
+
+| Year | Milestone                                                                                                |
+| ---- | -------------------------------------------------------------------------------------------------------- |
+| 1995 | Brendan Eich creates JavaScript at Netscape in 10 days. Initially named Mocha → LiveScript → JavaScript. |
+| 1996 | Microsoft introduces **JScript** for Internet Explorer.                                                  |
+| 1997 | JavaScript standardized as **ECMAScript (ES1)** by ECMA International.                                   |
+| 1998 | **ES3** introduces regular expressions and exception handling.                                           |
+| 2005 | **AJAX** enables dynamic web apps with asynchronous data loading.                                        |
+| 2006 | **jQuery** launches, simplifying DOM manipulation.                                                       |
+| 2009 | **ES5** adds JSON support, map, filter, reduce, forEach, strict mode.                                    |
+| 2009 | **Node.js** released → JavaScript on servers.                                                            |
+| 2010 | **AngularJS** popularizes frontend frameworks.                                                           |
+| 2013 | **ReactJS** introduces component-based architecture & Virtual DOM.                                       |
+| 2014 | ECMAScript adopts **annual updates**.                                                                    |
+| 2015 | **ES6 (ES2015)** introduces let, const, classes, modules, promises.                                      |
+| 2016 | **Vue.js** gains popularity.                                                                             |
+| 2017 | **ES8** adds async/await.                                                                                |
+| 2019 | **ES10** adds flat(), flatMap(), optional catch binding.                                                 |
+| 2020 | **Deno** released as a secure alternative to Node.js.                                                    |
+| 2021 | **ES12** adds logical assignment operators.                                                              |
+| 2022 | **ES13** adds `.at()` method and top-level await.                                                        |
+| 2023 | **ES14** introduces `groupBy()` and `toSorted()`.                                                        |
+| 2024 | **React Server Components (RSC)** improve web app performance.                                           |
+| 2025 | JavaScript continues evolving with AI & WebAssembly integration.                                         |
+
+📊 **Mermaid Timeline: JavaScript History**
+
+```mermaid
+timeline
+    title JavaScript Evolution
+    1995 : Created by Brendan Eich (Mocha → LiveScript → JS)
+    1997 : Standardized as ECMAScript (ES1)
+    2009 : Node.js released
+    2015 : ES6 introduces modern JS features
+    2020 : Deno released
+    2025 : AI features + WebAssembly integration
+```
