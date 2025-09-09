@@ -389,3 +389,56 @@ timeline
     2020 : Deno released
     2025 : AI features + WebAssembly integration
 ```
+
+---
+
+# 📜 ECMAScript (ES)
+
+## 🌍 ECMA International
+
+**ECMA International** is an organization that creates standards for information and communication technologies.
+
+🔗 Official Website: [ecma-international.org](https://ecma-international.org/)
+
+---
+
+## 📘 ECMA-262 Standard
+
+**ECMA-262** is a specification published by ECMA International.
+
+It defines the standard for a **general-purpose scripting language — ECMAScript**.
+
+🔗 Standard Link: [ECMA-262 Specification](https://ecma-international.org/publications-and-standards/standards/ecma-262/)
+
+---
+
+## ❓ What is ECMAScript?
+
+**ECMAScript (ES)** is the standardized scripting language specification described in **ECMA-262**.
+
+It provides the **core rules, features, syntax, and behavior** for scripting languages like:
+
+* 🌐 JavaScript
+* 📱 JScript
+* 🖥 ActionScript
+
+---
+
+## 🛠 Why is ECMAScript Important?
+
+* Ensures **consistency** across all browsers and platforms.
+* Defines how features like **variables, functions, loops, and objects** should work.
+* Keeps JavaScript **standardized and evolving** with yearly updates (ES6, ES7, ES8 …).
+
+---
+
+📊 **Mermaid Diagram: ECMAScript & JavaScript**
+
+```mermaid
+graph TD
+A[ECMA International] --> B[Publishes ECMA-262]
+B --> C[Defines ECMAScript Standard]
+C --> D[JavaScript]
+C --> E[JScript]
+C --> F[ActionScript]
+```
