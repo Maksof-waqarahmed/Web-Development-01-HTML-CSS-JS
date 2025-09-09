@@ -1,4 +1,4 @@
-# 📌 How to Connect JavaScript Files to HTML
+# 📌 How to Connect JavaScript Files to HTML & JavaScript Output
 
 ---
 
@@ -128,3 +128,139 @@
 ```html
 <link rel="preload" href="/js/app.js" as="script">
 ```
+---
+---
+
+# 📢 JavaScript Output & Code Basics
+
+---
+
+## 1️⃣ Output Methods
+
+### 🛑 1. `alert()`
+
+The `alert()` function in JavaScript is used to display a pop-up message box to the user. It is typically used to provide information or warnings.
+
+**Syntax:**
+
+```js
+alert(message);
+```
+
+**Parameters:**
+
+* `message`: A string or value to be displayed in the alert box.
+
+**Example:**
+
+```js
+alert("Welcome to JavaScript!");
+```
+
+---
+
+### 📝 2. `document.write()`
+
+The `document.write()` method writes text, HTML, or JavaScript code directly to the web page. It is used to dynamically display content during the page loading process.
+
+**Syntax:**
+
+```js
+document.write(content);
+```
+
+**Parameters:**
+
+* `content`: A string of text or HTML to be written to the document.
+
+**Example:**
+
+```js
+document.write("<h2>Hello, World!</h2>");
+```
+
+⚠️ **Note:** Using `document.write()` after the page has fully loaded can overwrite the entire document.
+
+---
+
+### 🖥️ 3. `console.log()`
+
+The `console.log()` method is used to print messages, variables, or any data to the browser's console. It is primarily used for debugging purposes.
+
+**Syntax:**
+
+```js
+console.log(message);
+```
+
+**Parameters:**
+
+* `message`: Any value (string, variable, object, etc.) you want to log to the console.
+
+**Example:**
+
+```js
+console.log("Debugging message");
+```
+
+---
+
+## 2️⃣ Statements & Comments
+
+### 📌 Statements
+
+In programming, a **statement** is a single line or instruction that performs a specific action.
+
+**Example:**
+
+```js
+console.log("Adult");
+```
+
+---
+
+### 💬 Comments
+
+Comments are **non-executable lines** of text in a program that provide explanations, descriptions, or notes for developers. They are ignored by the compiler or interpreter and do not affect the program's functionality.
+
+#### ✅ Types of Comments:
+
+1. **Single-line Comments**
+   Used for short explanations or notes.
+
+```js
+// This is a single line comment
+console.log("Hello");
+```
+
+🔹 Name: `/` (Forward Slash)
+
+---
+
+2. **Multi-line Comments**
+   Used for longer descriptions or notes.
+
+```js
+/*
+This is a multi-line comment.
+It can span multiple lines.
+*/
+console.log("Hello Again");
+```
+
+🔹 Name: `*` (Asterisk) + `/` (Forward Slash)
+
+---
+
+## 3️⃣ Diagram – JavaScript Output Flow
+
+```mermaid
+graph TD;
+  A[👨‍💻 Developer Writes Code] --> B[alert() - Pop-up Box];
+  A --> C[document.write() - Writes to Webpage];
+  A --> D[console.log() - Logs in Console];
+```
+
+---
+
+✨ Now you know how to **show output, write statements, and add comments** in JavaScript!
