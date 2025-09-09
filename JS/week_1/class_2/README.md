@@ -252,15 +252,4 @@ console.log("Hello Again");
 
 ---
 
-## 3️⃣ Diagram – JavaScript Output Flow
-
-```mermaid
-graph TD;
-  A[👨‍💻 Developer Writes Code] --> B[alert() - Pop-up Box];
-  A --> C[document.write() - Writes to Webpage];
-  A --> D[console.log() - Logs in Console];
-```
-
----
-
 ✨ Now you know how to **show output, write statements, and add comments** in JavaScript!
