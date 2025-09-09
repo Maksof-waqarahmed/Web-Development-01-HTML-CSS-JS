@@ -160,7 +160,6 @@ Try to solve these small challenges 👇
 1. Declare three variables using `var`, `let`, and `const`. Print them using `console.log()`.
 2. Create a variable called `city` and assign `"Karachi"`. Reassign it to `"Lahore"`. Try with `let` and `const`. What happens?
 3. Write code that stores a number, then changes it into a string. Use `typeof` to check type before and after.
-4. Create an object with your name and age. Print it.
 5. What will be the output?
 
    ```js
