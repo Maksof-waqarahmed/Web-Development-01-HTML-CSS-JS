@@ -14,7 +14,7 @@ They are widely used in **if-else statements** and **loops**.
 | Operator | Meaning | Example             | Output  |          |   |           |        |
 | -------- | ------- | ------------------- | ------- | -------- | - | --------- | ------ |
 | `&&`     | AND     | `(5 > 3 && 10 > 5)` | `true`  |          |   |           |        |
-| \`       |         | \`                  | OR      | \`(5 > 3 |   | 10 < 5)\` | `true` |
+| `||`     | OR      | `(5 > 3 || 10 < 5)` | `true`  |          |   |           |        |
 | `!`      | NOT     | `!(5 > 3)`          | `false` |          |   |           |        |
 
 ---
