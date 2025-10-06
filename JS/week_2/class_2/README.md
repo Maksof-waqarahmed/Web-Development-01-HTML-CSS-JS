@@ -25,15 +25,7 @@ console.log(str.charAt(0)); // Output: "J"
 console.log(str.charAt(4)); // Output: "S"
 ```
 
-### ii. `charCodeAt(index)`
-
-Returns the **Unicode (ASCII) value** of the character at the specified index.
-
-```javascript
-console.log(str.charCodeAt(0)); // Output: 74 ("J")
-```
-
-### iii. `at(index)`
+### ii. `at(index)`
 
 Works like `charAt()` but supports **negative indexing**.
 
@@ -42,7 +34,7 @@ console.log(str.at(0));  // "J"
 console.log(str.at(-1)); // "t" (last character)
 ```
 
-### iv. Bracket Notation: `string[index]`
+### iii. Bracket Notation: `string[index]`
 
 Access characters like an array.
 
@@ -182,12 +174,6 @@ let text2 = "JS JS JS";
 console.log(text2.lastIndexOf("JS")); // 6
 ```
 
-### iii. `search(regExp)`
-
-```javascript
-console.log(phrase.search(/JavaScript/)); // 7
-```
-
 ---
 
 ## 🔹 9. Matching & Checking
@@ -226,3 +212,152 @@ Try these exercises to practice:
 8. Split `"a,b,c,d,e"` into an array.
 9. Check if `"I love JS"` **includes** `"love"`.
 10. Check if `"Hello"` **startsWith** `"He"` and **endsWith** `"lo"`.
+
+---
+
+# 🏠 **Home Task – JavaScript Strings Practice**
+
+---
+
+## 🔹 **Task 1: Custom Greeting Generator**
+
+Create a program that:
+
+1. Takes a user’s first name and last name in two variables.
+2. Combines them using **`concat()`** or **template literals**.
+3. Converts the final message to **uppercase**.
+4. Displays it using `console.log()`.
+
+🧩 **Example Output:**
+
+```
+HELLO, JOHN DOE! WELCOME TO JAVASCRIPT.
+```
+
+---
+
+## 🔹 **Task 2: Word Counter**
+
+Write a JS program that counts how many words are in the sentence:
+
+`"JavaScript is an amazing programming language"`
+
+🧩 **Output:**
+
+```
+Total Words: 5
+```
+
+---
+
+## 🔹 **Task 3: Extract Domain from Email**
+
+Given:
+
+```js
+let email = "student@example.com";
+```
+
+Write code to extract only the domain name (`example.com`) using string methods (`slice`, `indexOf`).
+
+🧩 **Output:**
+
+```
+Domain: example.com
+```
+
+---
+
+## 🔹 **Task 4: Mask a Secret Word**
+
+You have:
+
+```js
+let secret = "password123";
+```
+
+Replace all characters except the first and last with `*`.
+
+🧩 **Output:**
+
+```
+p********3
+```
+
+💡 **Hint:** Combine `slice()`, `replace()`, and `.length`.
+
+---
+
+## 🔹 **Task 5: Sentence Formatter**
+
+Given:
+
+```js
+let sentence = "   javascript is FUN!   ";
+```
+
+Perform the following:
+
+1. Remove extra spaces.
+2. Capitalize first letter only (Output: `"Javascript is fun!"`).
+3. Log the clean sentence.
+
+💡 **Hint:** Use `trim()`, `toLowerCase()`, `charAt()`, and string concatenation.
+
+---
+
+## 🔹 **Task 6: Replace All Vowels**
+
+Take a string from the user (e.g., `"Hello JavaScript"`) and replace **all vowels** with `*`.
+
+🧩 **Output:**
+
+```
+H*ll* J*v*Scr*pt
+```
+
+💡 **Hint:** Use `replaceAll()` or a regular expression `/[aeiou]/gi`.
+
+---
+
+## 🔹 **Task 7: Search Keyword in Paragraph**
+
+Given:
+
+```js
+let paragraph = "JavaScript is versatile. I love learning JavaScript because JavaScript is everywhere!";
+```
+
+Count how many times the word `"JavaScript"` appears.
+
+🧩 **Output:**
+
+```
+Word 'JavaScript' found 3 times.
+```
+
+---
+
+## ⭐ **Bonus Challenge (Creative Task)**
+
+Make a program called **"Text Analyzer"**:
+
+1. Take a sentence as input.
+2. Show:
+
+   * Total characters (`length`)
+   * Total words
+   * Whether it contains `"JavaScript"`
+   * Same text in uppercase
+
+🧩 **Example Output:**
+
+```
+Sentence: I love JavaScript
+Characters: 17
+Words: 3
+Contains "JavaScript": true
+Uppercase: I LOVE JAVASCRIPT
+```
+
+---
