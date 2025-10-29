@@ -85,7 +85,7 @@
 
 🖼️ **Diagram:**
 
-![Script Placement](../../../images/w.png)
+<img src="./images/w.PNG" alt="Script Placement">
 
 ---
 
