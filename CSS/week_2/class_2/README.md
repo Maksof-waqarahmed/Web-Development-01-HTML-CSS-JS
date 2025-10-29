@@ -2,129 +2,161 @@
 
 ## 1. 📊 CSS Tables
 
-HTML tables (`<table>`, `<tr>`, `<td>`, `<th>`) can be styled with CSS to improve readability and design.
+HTML tables (`<table>`, `<tr>`, `<td>`, `<th>`) are used to organize tabular data. CSS enhances their readability, layout, and presentation.
 
-### 🔹 Common Properties
+### 🔹 Common Table Properties
 
 #### 1. **border**
 
-* Purpose: Controls table and cell borders.
-* Values: `1px solid black`, `2px dashed red`, etc.
-* Example:
+Defines the line around table elements.
 
-  ```css
-  table, th, td {
-    border: 1px solid black;
-  }
-  ```
+```css
+table, th, td {
+  border: 1px solid black;
+}
+```
+
+**Example values:** `1px solid black`, `2px dashed red`, etc.
+
+---
 
 #### 2. **border-collapse**
 
-* Purpose: Defines whether table borders are separated or collapsed.
-* Values:
+Specifies whether table borders are separated or merged.
 
-  * `separate` → Default, borders are separated.
-  * `collapse` → Adjacent borders merge into a single border.
+```css
+table {
+  border-collapse: collapse;
+}
+```
+
+**Values:**
+
+* `separate` → (default) borders are distinct.
+* `collapse` → adjacent borders combine into one.
+
+---
 
 #### 3. **border-spacing**
 
-* Purpose: Sets spacing between table cells (works only with `border-collapse: separate`).
-* Values: `10px`, `5px 15px` (horizontal, vertical).
+Defines space between table cells (only works when `border-collapse: separate`).
+
+```css
+table {
+  border-spacing: 10px 15px;
+}
+```
+
+**Values:** single value (uniform spacing) or two values (horizontal vertical).
+
+---
 
 #### 4. **table-layout**
 
-* Purpose: Defines how table columns are sized.
-* Values:
+Determines how the browser calculates column widths.
 
-  * `auto` → Default, width adjusts to content.
-  * `fixed` → Width fixed by table width and first row cells.
+```css
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+```
 
-#### 5. **caption-side**
+**Values:**
 
-* Purpose: Sets the position of a table caption.
-* Values:
+* `auto` → adjusts based on content.
+* `fixed` → based on the first row or table width.
 
-  * `top` → Default, above the table.
-  * `bottom` → Below the table.
+---
 
-#### 6. **empty-cells**
+#### 5. **empty-cells**
 
-* Purpose: Defines if borders and background should show for empty cells.
-* Values: `show` (default), `hide`.
+Controls visibility of borders and background in empty cells.
 
-#### 7. **vertical-align** (for cells)
+```css
+table {
+  empty-cells: hide;
+}
+```
 
-* Purpose: Aligns content vertically inside `<td>`/`<th>`.
-* Values: `top`, `middle`, `bottom`, `baseline`.
+**Values:** `show` (default) | `hide`
 
 ---
 
 ## 2. 📍 CSS Position
 
-The `position` property defines how elements are placed in a page.
+The `position` property controls how an element is placed in the document flow.
 
-### 🔹 position
+### 🔹 Position Values
 
-* **Values**:
+| Value      | Description                                                          |
+| ---------- | -------------------------------------------------------------------- |
+| `static`   | Default positioning (normal flow).                                   |
+| `relative` | Positioned relative to its original location.                        |
+| `absolute` | Positioned relative to its nearest positioned ancestor.              |
+| `fixed`    | Positioned relative to the viewport (stays fixed on scroll).         |
+| `sticky`   | Acts like relative until a scroll threshold is reached, then sticks. |
 
-  * `static` → Default, element in normal flow.
-  * `relative` → Positioned relative to its normal position (can use `top`, `left`, etc.).
-  * `absolute` → Positioned relative to nearest positioned ancestor (removed from normal flow).
-  * `fixed` → Positioned relative to the viewport (stays on screen while scrolling).
-  * `sticky` → Acts like relative until a scroll point, then sticks.
+**Example:**
 
-### 🔹 offset properties
+```css
+.box {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+```
 
-* Used with `position`:
+---
 
-  * `top`, `right`, `bottom`, `left`.
-* Example:
+### 🔹 Offset Properties
 
-  ```css
-  .box {
-    position: absolute;
-    top: 50px;
-    left: 20px;
-  }
-  ```
+Used to shift positioned elements:
+
+* `top`, `right`, `bottom`, `left`
+
+---
 
 ### 🔹 z-index
 
-* Purpose: Controls stacking order of elements (which appears in front).
-* Values:
+Defines the stacking order (which element appears above others).
 
-  * `auto` → Default.
-  * Numbers: `1`, `10`, `999` → Higher = closer to front.
+```css
+.modal {
+  position: fixed;
+  z-index: 999;
+}
+```
+
+Higher values appear on top.
 
 ---
 
 ## 3. 📐 CSS Display
 
-The `display` property defines how an element is displayed in the layout.
+The `display` property defines how an element behaves in layout and how it interacts with other elements.
 
-### 🔹 Common Values
+### 🔹 Common Display Values
 
-* `block` → Takes full width, starts on new line (`div`, `p`).
-* `inline` → Only takes as much width as needed (`span`, `a`).
-* `inline-block` → Behaves like inline but allows block properties (margin, width, height).
-* `none` → Hides the element completely.
-* `flex` → Enables Flexbox layout.
-* `grid` → Enables CSS Grid layout.
-* `inline-flex` → Flexbox but inline level.
-* `inline-grid` → Grid but inline level.
-* `list-item` → Behaves like `<li>`.
-* `table` → Behaves like `<table>`.
-* `contents` → Makes the element disappear but keeps its children.
+| Value          | Behavior                                                       |
+| -------------- | -------------------------------------------------------------- |
+| `block`        | Starts on a new line and takes full width.                     |
+| `inline`       | Stays in line with text, only as wide as content.              |
+| `inline-block` | Behaves inline but accepts block properties like width/height. |
+| `none`         | Completely hides the element (not rendered).                   |
+| `flex`         | Enables Flexbox layout for one-dimensional layouts.            |
+| `grid`         | Enables Grid layout for two-dimensional layouts.               |
 
-### 🔹 Example
+**Example:**
 
 ```css
 .box1 {
   display: block;
 }
+
 .box2 {
   display: inline-block;
-  width: 100px;
+  width: 120px;
   height: 50px;
 }
 ```
@@ -133,36 +165,18 @@ The `display` property defines how an element is displayed in the layout.
 
 ## 4. 📦 CSS Overflow
 
-The `overflow` property controls what happens when content is too large for its container.
+The `overflow` property determines how content behaves when it exceeds the container’s boundaries.
 
-### 🔹 overflow
+### 🔹 Main Property: `overflow`
 
-* **Values**:
+| Value     | Description                                     |
+| --------- | ----------------------------------------------- |
+| `visible` | Default — content spills outside the container. |
+| `hidden`  | Extra content is clipped and hidden.            |
+| `scroll`  | Always adds scrollbars (even if not needed).    |
+| `auto`    | Adds scrollbars only when necessary.            |
 
-  * `visible` → Default, content spills out.
-  * `hidden` → Extra content is clipped (not visible).
-  * `scroll` → Adds scrollbars (always, even if not needed).
-  * `auto` → Adds scrollbars only when needed.
-
-### 🔹 overflow-x / overflow-y
-
-* Purpose: Control horizontal (`x`) or vertical (`y`) overflow separately.
-* Values: `visible`, `hidden`, `scroll`, `auto`.
-
-### 🔹 text-overflow (for inline text)
-
-* Purpose: Handles overflowing inline text.
-* Values:
-
-  * `clip` → Cuts off text.
-  * `ellipsis` → Shows `...` for overflow.
-
-### 🔹 white-space (related)
-
-* Purpose: Controls text wrapping.
-* Values: `normal`, `nowrap`, `pre`, `pre-line`, `pre-wrap`.
-
-### 🔹 Example
+**Example:**
 
 ```css
 .box {
@@ -174,9 +188,48 @@ The `overflow` property controls what happens when content is too large for its 
 
 ---
 
+### 🔹 Directional Overflow
+
+* `overflow-x` → Controls horizontal overflow.
+* `overflow-y` → Controls vertical overflow.
+
+```css
+.container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+```
+
+---
+
+### 🔹 Text Overflow
+
+Specifically for handling inline text overflow.
+
+```css
+p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+```
+
+**Values:**
+
+* `clip` → Cuts off the text.
+* `ellipsis` → Shows `...` at the end.
+
+---
+
 ## 🎯 Conclusion
 
-* **Tables**: Use CSS to style borders, spacing, layout, and captions.
-* **Position**: Controls element placement (`static`, `relative`, `absolute`, `fixed`, `sticky`).
-* **Display**: Defines how elements behave in layout (`block`, `inline`, `flex`, `grid`).
-* **Overflow**: Manages content that doesn’t fit into its box (`hidden`, `scroll`, `auto`).
+| Concept      | Key Purpose                                                    |
+| ------------ | -------------------------------------------------------------- |
+| **Tables**   | Style and control layout with borders, spacing, and alignment. |
+| **Position** | Precisely control element placement and stacking.              |
+| **Display**  | Define how elements appear and interact in the layout.         |
+| **Overflow** | Manage content that exceeds container limits.                  |
+
+> 🧭 **Mastering these properties** builds a strong foundation for responsive, organized, and visually appealing web layouts.
+
+---
