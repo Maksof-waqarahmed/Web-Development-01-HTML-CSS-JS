@@ -1,158 +1,145 @@
-Perfect Rana 👍
-I’ll create another **README.md** (separate from the text properties one) that explains:
+# 📘 **CSS Box Model & Layout Properties**
 
-* **Background properties**
-* **Border properties**
-* **Margin & Padding**
-* **Height & Width**
-* **Box Model**
+## 🟢 **Introduction**
 
-And just like before, I’ll write them **in sequence, with purpose, values, and brief description of each value**.
+The **CSS Box Model** is the foundation of webpage layout and design.
+Every HTML element is treated as a **box**, which consists of four parts:
 
----
+1. **Content** → The actual text, image, or data within the element.
+2. **Padding** → Space between the content and the border.
+3. **Border** → Wraps around the content and padding.
+4. **Margin** → Space between the element and neighboring elements.
 
-# 📘 CSS Box Model and Layout Properties
-
-## 🟢 Introduction
-
-The **CSS Box Model** is the foundation of web design and layout.
-Every HTML element is treated as a **box** which consists of:
-
-1. **Content** → The actual text or image.
-2. **Padding** → Space between content and border.
-3. **Border** → Surrounds the padding and content.
-4. **Margin** → Space between the element’s border and other elements.
-
-Along with this, properties like **background, height, width** help define how the element looks and behaves.
+Alongside this, **background**, **height**, and **width** properties define the visual appearance and size of these boxes.
 
 ---
 
-## 🖼️ Background Properties
+## 🖼️ **Background Properties**
 
-### 1. **background-color**
+### 1. `background-color`
 
-* **Purpose**: Sets the background color of an element.
-* **Values**:
+* **Purpose:** Defines the background color of an element.
+* **Values:**
 
   * Named colors → `red`, `blue`, `green`
   * HEX → `#ff0000`
-  * RGB → `rgb(255,0,0)`
-  * RGBA → `rgba(255,0,0,0.5)`
-  * HSL → `hsl(0,100%,50%)`
+  * RGB → `rgb(255, 0, 0)`
+  * RGBA → `rgba(255, 0, 0, 0.5)`
+  * HSL → `hsl(0, 100%, 50%)`
 
 ---
 
-### 2. **background-image**
+### 2. `background-image`
 
-* **Purpose**: Sets an image as the background.
-* **Values**:
+* **Purpose:** Adds an image as the element’s background.
+* **Values:**
 
-  * `url("image.jpg")` → Adds image.
-  * `none` → Default, no image.
-
----
-
-### 3. **background-repeat**
-
-* **Purpose**: Controls how a background image is repeated.
-* **Values**:
-
-  * `repeat` → Repeats both horizontally and vertically.
-  * `repeat-x` → Repeats horizontally only.
-  * `repeat-y` → Repeats vertically only.
-  * `no-repeat` → No repetition.
+  * `url("image.jpg")` → Inserts image
+  * `none` → No background image (default)
 
 ---
 
-### 4. **background-position**
+### 3. `background-repeat`
 
-* **Purpose**: Defines the starting position of a background image.
-* **Values**:
+* **Purpose:** Controls how a background image repeats.
+* **Values:**
 
-  * Keywords → `left`, `center`, `right`, `top`, `bottom`.
-  * Coordinates → `50% 50%` (x%, y%), `10px 20px`.
-
----
-
-### 5. **background-size**
-
-* **Purpose**: Defines the size of a background image.
-* **Values**:
-
-  * `auto` → Default, keeps original size.
-  * `cover` → Covers the entire container.
-  * `contain` → Fits inside the container.
-  * Custom → `100px 200px`, `50% 50%`.
+  * `repeat` → Repeats both horizontally and vertically
+  * `repeat-x` → Repeats horizontally
+  * `repeat-y` → Repeats vertically
+  * `no-repeat` → Displays the image once
 
 ---
 
-### 6. **background-attachment**
+### 4. `background-position`
 
-* **Purpose**: Defines if the background scrolls or stays fixed.
-* **Values**:
+* **Purpose:** Sets where the background image begins.
+* **Values:**
 
-  * `scroll` → Scrolls with the page.
-  * `fixed` → Stays fixed in place.
-  * `local` → Scrolls with the element’s content.
+  * Keywords → `left`, `center`, `right`, `top`, `bottom`
+  * Coordinates → `50% 50%`, `10px 20px`
 
 ---
 
-### 7. **background (Shorthand)**
+### 5. `background-size`
 
-* **Purpose**: Sets all background properties in one line.
-* **Example**:
+* **Purpose:** Controls the scaling of background images.
+* **Values:**
+
+  * `auto` → Keeps original size
+  * `cover` → Fills the entire container
+  * `contain` → Fits the image inside the container
+  * Custom → `100px 200px`, `50% 50%`
+
+---
+
+### 6. `background-attachment`
+
+* **Purpose:** Defines whether the background scrolls or stays fixed.
+* **Values:**
+
+  * `scroll` → Moves with the page
+  * `fixed` → Stays in place while scrolling
+  * `local` → Scrolls with the element’s content
+
+---
+
+### 7. `background` *(Shorthand)*
+
+* **Purpose:** Combines all background properties into one line.
+* **Example:**
 
   ```css
-  background: url("image.jpg") no-repeat center/cover fixed red;
+  background: url("image.jpg") no-repeat center/cover fixed #f0f0f0;
   ```
 
 ---
 
-## 📦 Border Properties
+## 📦 **Border Properties**
 
-### 1. **border-width**
+### 1. `border-width`
 
-* **Purpose**: Defines the thickness of the border.
-* **Values**: `thin`, `medium`, `thick`, or custom units like `2px`.
-
----
-
-### 2. **border-style**
-
-* **Purpose**: Defines the style of the border.
-* **Values**:
-
-  * `none` → No border.
-  * `solid` → Solid line.
-  * `dashed` → Dashed line.
-  * `dotted` → Dotted line.
-  * `double` → Double lines.
-  * `groove`, `ridge`, `inset`, `outset` → 3D styles.
+* **Purpose:** Defines how thick the border appears.
+* **Values:** `thin`, `medium`, `thick`, or custom (e.g., `2px`).
 
 ---
 
-### 3. **border-color**
+### 2. `border-style`
 
-* **Purpose**: Defines the color of the border.
-* **Values**: Any valid color (named, HEX, RGB, HSL).
+* **Purpose:** Sets the border’s visual style.
+* **Values:**
 
----
-
-### 4. **border-radius**
-
-* **Purpose**: Rounds the corners of the border.
-* **Values**:
-
-  * `0` → No rounding.
-  * `10px` → Rounded corners.
-  * `50%` → Circle (for square elements).
+  * `none` → No border
+  * `solid` → Solid line
+  * `dashed` → Dashed line
+  * `dotted` → Dotted line
+  * `double` → Double line
+  * `groove`, `ridge`, `inset`, `outset` → 3D effects
 
 ---
 
-### 5. **border (Shorthand)**
+### 3. `border-color`
 
-* **Purpose**: Combines width, style, and color in one line.
-* **Example**:
+* **Purpose:** Defines the color of the border.
+* **Values:** Any valid color format (named, HEX, RGB, HSL).
+
+---
+
+### 4. `border-radius`
+
+* **Purpose:** Rounds the corners of the border.
+* **Values:**
+
+  * `0` → No rounding
+  * `10px` → Slightly rounded corners
+  * `50%` → Fully circular (for square elements)
+
+---
+
+### 5. `border` *(Shorthand)*
+
+* **Purpose:** Combines width, style, and color.
+* **Example:**
 
   ```css
   border: 2px solid red;
@@ -160,74 +147,74 @@ Along with this, properties like **background, height, width** help define how t
 
 ---
 
-## 📏 Margin Properties
+## 📏 **Margin Properties**
 
-* **Purpose**: Creates space **outside** the element’s border.
+* **Purpose:** Creates space **outside** the border, separating elements.
 
-### 1. **margin**
+### 1. `margin`
 
-* **Values**:
+* **Values:**
 
-  * `auto` → Browser automatically adjusts margins.
-  * `10px` → Applies margin on all sides.
-  * `10px 20px` → Top/Bottom = 10px, Left/Right = 20px.
-  * `10px 20px 30px 40px` → Top, Right, Bottom, Left (clockwise).
-
----
-
-### 2. **margin-top / margin-right / margin-bottom / margin-left**
-
-* **Purpose**: Set margins individually for each side.
+  * `auto` → Browser sets margin automatically
+  * `10px` → Equal margins on all sides
+  * `10px 20px` → Top/Bottom = 10px, Left/Right = 20px
+  * `10px 20px 30px 40px` → Top, Right, Bottom, Left (clockwise)
 
 ---
 
-## 📐 Padding Properties
+### 2. `margin-top`, `margin-right`, `margin-bottom`, `margin-left`
 
-* **Purpose**: Creates space **inside** the element, between content and border.
-
-### 1. **padding**
-
-* **Values**:
-
-  * `10px` → All sides equal.
-  * `10px 20px` → Top/Bottom = 10px, Left/Right = 20px.
-  * `10px 20px 30px 40px` → Top, Right, Bottom, Left (clockwise).
+* **Purpose:** Controls individual sides separately.
 
 ---
 
-### 2. **padding-top / padding-right / padding-bottom / padding-left**
+## 📐 **Padding Properties**
 
-* **Purpose**: Set padding individually for each side.
+* **Purpose:** Creates space **inside** the element, between content and border.
 
----
+### 1. `padding`
 
-## 📏 Height and Width
+* **Values:**
 
-### 1. **height**
-
-* **Purpose**: Sets the height of an element.
-* **Values**:
-
-  * `auto` → Default, adjusts to content.
-  * Fixed units → `200px`, `20em`.
-  * Percentage → `50%` (relative to parent).
-  * `min-height`, `max-height` → Define limits.
+  * `10px` → Equal padding on all sides
+  * `10px 20px` → Top/Bottom = 10px, Left/Right = 20px
+  * `10px 20px 30px 40px` → Top, Right, Bottom, Left (clockwise)
 
 ---
 
-### 2. **width**
+### 2. `padding-top`, `padding-right`, `padding-bottom`, `padding-left`
 
-* **Purpose**: Sets the width of an element.
-* **Values**:
-
-  * `auto` → Default, adjusts to content.
-  * Fixed units → `400px`, `50em`.
-  * Percentage → `80%`.
-  * `min-width`, `max-width` → Define limits.
+* **Purpose:** Adjust padding individually for each side.
 
 ---
 
-## 📦 CSS Box Model Diagram
+## 📏 **Height & Width Properties**
+
+### 1. `height`
+
+* **Purpose:** Controls the vertical size of an element.
+* **Values:**
+
+  * `auto` → Adjusts automatically to content
+  * Fixed → `200px`, `20em`
+  * Percentage → `50%` (relative to parent container)
+  * `min-height`, `max-height` → Sets boundaries
+
+---
+
+### 2. `width`
+
+* **Purpose:** Controls the horizontal size of an element.
+* **Values:**
+
+  * `auto` → Default (adjusts to content)
+  * Fixed → `400px`, `50em`
+  * Percentage → `80%`
+  * `min-width`, `max-width` → Sets limits
+
+---
+
+## 🧱 **CSS Box Model Diagram**
 
 ```
 +-------------------------+
@@ -246,6 +233,10 @@ Along with this, properties like **background, height, width** help define how t
 
 ---
 
-## 🎯 Conclusion
+## 🎯 **Conclusion**
 
-The **Box Model** and related properties (`background`, `border`, `margin`, `padding`, `height`, `width`) are the backbone of web layout. Mastering these ensures precise control over **spacing, positioning, and design** of elements on a web page.
+The **CSS Box Model** forms the backbone of web page layout.
+By mastering **background**, **border**, **margin**, **padding**, **height**, and **width**, developers gain precise control over **spacing, structure, and visual balance**.
+Understanding this model is essential for building **clean, responsive, and visually appealing** web designs.
+
+---

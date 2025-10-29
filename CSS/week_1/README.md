@@ -1,30 +1,47 @@
-# 📘 CSS Assignments (Week 1)
+# 📘 **CSS Assignments (Week 1)**
 
-## 1. 🎨 Text Properties Assignment
+## 🎨 **Task: Create a Profile Card**
 
-* Create a **profile card** that includes:
+### 🧠 Objective
 
-  * Name, short bio, and a quote.
-  * Use different **fonts, colors, text-align, text-decoration, text-transform**.
-  * Apply **text-shadow** to the name.
-  * Add different **letter-spacing, word-spacing, and line-height**.
+Design a **profile card** using **CSS text, styling properties, background properties and Box Model** to make it visually appealing and well-structured.
 
 ---
 
-## 2. 🖼️ Background + Borders + Box Model Assignment
+### 💡 Inspiration Examples
 
-* Design a **simple product card**:
+Take design ideas from these sample cards:
 
-  * Add a **background color** and an optional **background image**.
-  * Use **borders with different styles** (solid, dashed, dotted).
-  * Round the corners with **border-radius**.
-  * Adjust **margin & padding** to give spacing.
-  * Define a fixed **height & width**.
-  * Draw a **box model diagram** on paper to explain what you did.
+1️⃣ [Example 1](https://miro.medium.com/v2/resize:fit:1200/1*U3wCFGkDRcROndfJ_za2Ow.png)
+2️⃣ [Example 2](https://i.imgur.com/mQJbeSi.png)
+3️⃣ [Example 3](https://i.ytimg.com/vi/kRs3aTi3pzU/maxresdefault.jpg)
 
 ---
 
-Example Cards:
-1) https://miro.medium.com/v2/resize:fit:1200/1*U3wCFGkDRcROndfJ_za2Ow.png
-2) https://i.imgur.com/mQJbeSi.png
-3) https://i.ytimg.com/vi/kRs3aTi3pzU/maxresdefault.jpg
+### 🧾 **Submission Guidelines**
+
+1. 🎥 **Create a short video** (using any screen recording software)
+
+   * Show how your assignment works (from code to browser preview).
+   * Keep it clear and well-presented.
+
+2. 🌐 **Host your project live** on **[Netlify](https://www.netlify.com/)**.
+
+   * Example: `https://yourname-profilecard.netlify.app`
+
+3. 💻 **Post your work on LinkedIn**
+
+   * Add screenshots or your video.
+   * Write a short caption about what you learned.
+   * Include:
+     ✅ **Live Project URL (Netlify)**
+     ✅ **GitHub Repository Link**
+   * **Tag me** in your LinkedIn post.
+
+4. 💬 **Submit your LinkedIn post link**
+
+   * Go to the **Slack group**.
+   * Find the **assignment thread** for your class.
+   * Paste your **LinkedIn post link** there as your official submission.
+
+---
