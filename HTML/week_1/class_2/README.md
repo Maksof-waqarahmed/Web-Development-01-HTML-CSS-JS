@@ -210,10 +210,10 @@ Semantic elements define the **purpose** and **meaning** of web page sections. T
 ### Examples
 
 ```markdown
-![Semantic HTML Structure](./images/semantic1.png)
+![Semantic HTML Structure](images/semantic1.png)
 *Figure 1: Basic structure of semantic elements.*
 
-![Semantic Layout VS Non Semantic Layout](./images/semantic2.jpg)
+![Semantic Layout VS Non Semantic Layout](images/semantic2.jpg)
 *Figure 2: Semantic tags Layout VS Non Semantic tags Layout.*
 ```
 
