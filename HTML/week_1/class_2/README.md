@@ -207,25 +207,15 @@ Semantic elements define the **purpose** and **meaning** of web page sections. T
 
 ---
 
-### 🧱 Semantic Layout Structure
+### Examples
 
-```mermaid
-graph TD
-A[<html>] --> B[<header> - Logo, Navigation]
-A --> C[<main>]
-B --> D[<nav> - Menu Links]
-C --> E[<section> - Thematic Content]
-E --> F[<article> - Blog or News Post]
-E --> G[<aside> - Sidebar Info or Ads]
-F --> H[<figure> - Image or Chart]
-H --> I[<figcaption> - Caption for Image]
-A --> J[<footer> - Copyright, Contact Info]
+```markdown
+![Semantic HTML Structure](semantic1.png)
+*Figure 1: Basic structure of semantic elements.*
+
+![Semantic Layout VS Non Semantic Layout](semantic2.png)
+*Figure 2: Semantic tags layout VS Non Semantic tags layout.*
 ```
-
-🟢 **Visualization:**
-This shows the **semantic skeleton** of a modern HTML5 webpage — header and footer frame the main content, sections organize topics, and articles hold independent pieces of information.
-
----
 
 ### 🧩 Common Semantic Tags
 
