@@ -36,7 +36,7 @@ Take design ideas from these sample cards:
    * Include:
      ✅ **Live Project URL (Netlify)**
      ✅ **GitHub Repository Link**
-   * **Tag me** in your LinkedIn post.
+   * **Tag me** (@Waqar Rana) in your LinkedIn post.
 
 4. 💬 **Submit your LinkedIn post link**
 

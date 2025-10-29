@@ -64,7 +64,7 @@ Design a **student result table** that demonstrates the use of **table styling, 
 
 ## 🧾 Submission Guidelines
 
-### 🪄 Step-by-Step Submission Process
+### Step-by-Step Submission Process
 
 1. **Record a short video** (using any screen recorder) explaining your assignment:
 

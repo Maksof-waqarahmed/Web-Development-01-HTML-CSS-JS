@@ -1,41 +1,81 @@
-# 📘 CSS Assignments (Week 3)
+# 📘 CSS Assignments — Week 3
 
-## 1. 📐 Flexbox Assignment
+## 🎯 Overview
 
-* Create a **pricing section** with 3 cards (Basic, Standard, Premium).
-
-  * Use `display: flex;` with `justify-content: space-around;`.
-  * Align items using `align-items`.
-  * Add gaps using `gap`.
-  * Make one card slightly bigger using `flex: 2;`.
-
-Example:
-1) https://cdn.dribbble.com/userupload/4171505/file/original-46da18c8962a1451cd274dbb494eb17e.png?resize=400x0
-2) https://images01.nicepagecdn.com/page/45/94/website-template-preview-459420.jpg
-3) https://onepagelove.imgix.net/2024/01/ultimate-mockup-bundle-1706017896161.jpg?w=2880&h=auto&fit=crop&fp-y=0&auto=compress
+In this week’s assignments, students will explore the power of **CSS Flexbox** and **Media Queries** to design responsive, modern web layouts.
+Through this task, you’ll learn how to build a layout that automatically adapts across **mobile, tablet, and desktop** screens — a crucial skill for modern web development.
 
 ---
 
-## 6. 📊 Grid Assignment
+## 1. 🧩 Flexbox & Media Queries — *Responsive Navbar + Hero Section*
 
-* Create a **website layout** using Grid:
+### 🧠 Objective
 
-  * `Header` at the top.
-  * `Sidebar` on the left.
-  * `Main content` in the center.
-  * `Right sidebar` (optional).
-  * `Footer` at the bottom.
-* Use `grid-template-areas` to structure it.
-* Add `gap` between rows and columns.
+Create a **fully responsive website layout** that includes a **navigation bar** and a **hero section**.
+The design should look visually balanced and automatically adjust to all screen sizes.
 
 ---
 
-## 7. 📱 Media Queries Assignment
+### 📋 Requirements
 
-* Create a **responsive landing page**:
+#### 🔹 Navigation Bar
 
-  * For desktop (`min-width: 1024px`): show **3 columns** layout.
-  * For tablet (`min-width: 768px`): show **2 columns** layout.
-  * For mobile (`max-width: 600px`): show **1 column** layout.
-* Test using browser’s device toolbar.
+* Include:
 
+  * Website **logo or name**
+  * **4–5 navigation links** (e.g., Home, About, Services, Contact)
+  * A **call-to-action button** (e.g., “Get Started”)
+* Use **Flexbox** for horizontal alignment and spacing.
+* Implement a **menu icon (☰)** for small screens.
+* Make it responsive using **Media Queries**.
+
+#### 🔹 Hero Section
+
+* Create a section with:
+
+  * A **headline (h1)**
+  * A **short description (p)**
+  * A **button** (e.g., “Explore Now”)
+  * An **image or illustration**
+* Use **Flexbox** to align text and image side-by-side on large screens.
+* Stack elements vertically on smaller screens (via media queries).
+
+---
+
+### 🖼️ Reference Examples
+
+1️⃣ [Example 1](https://img.freepik.com/premium-vector/website-banner-hero-section-design_774564-113.jpg)
+2️⃣ [Example 2](https://sketchelements.com/wp-content/uploads/2019/11/herp-section-illustration.png)
+3️⃣ [Example 3](https://static.vecteezy.com/ti/gratis-vektor/p1/2789265-social-media-marketing-experten-website-hero-section-design-kostenlos-vektor.jpg)
+
+---
+
+## 🧾 Submission Guidelines
+
+### Step-by-Step Submission Process
+
+1. **Record a short video** explaining your assignment:
+
+   * Show your HTML & CSS code.
+   * Demonstrate responsiveness (resize the browser window).
+
+2. **Deploy your project on Netlify**:
+
+   * Use your GitHub repository to deploy the live version.
+
+3. **Create a LinkedIn post**:
+
+   * Share screenshots or a short demo video.
+   * Write a short caption (what you learned about Flexbox & Media Queries).
+   * Include your:
+
+     * **Netlify Live URL**
+     * **GitHub Repository Link**
+   * Tag your instructor (`@Waqar Rana`) in the post.
+
+4. **Submit your LinkedIn post link**:
+
+   * Go to the **Slack group** for Week 3 submissions.
+   * Post your **LinkedIn post link** under the Week 3 **assignment thread**.
+
+---
