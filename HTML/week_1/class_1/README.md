@@ -38,11 +38,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Web Page</title>
+  <title></title>
 </head>
 <body>
-  <h1>Hello, World!</h1>
-  <p>Welcome to my first HTML page.</p>
 </body>
 </html>
 ```
@@ -58,23 +56,6 @@
 | `<head>`          | Metadata section (title, styles, scripts).  |
 | `<title>`         | Defines the title shown in the browser tab. |
 | `<body>`          | Contains visible page content.              |
-
----
-
-### 🪄 HTML Document Structure (Mermaid Diagram)
-
-```mermaid
-graph TD
-A[<!DOCTYPE html>] --> B[<html>]
-B --> C[<head>]
-B --> D[<body>]
-C --> E[<title>]
-C --> F[<meta> / <link> / <script>]
-D --> G[<h1> to <h6>]
-D --> H[<p> Paragraph]
-D --> I[<a> Links / <img> Images]
-D --> J[<div> / <section> / <footer> Semantic Elements]
-```
 
 ---
 
@@ -393,23 +374,6 @@ You can mix **ordered** and **unordered** lists together.
    * Node.js
    * Express
 
----
-
-## 🧭 Lists Structure Diagram (Mermaid)
-
-```mermaid
-graph TD
-A[HTML Lists] --> B[Ordered List <ol>]
-A --> C[Unordered List <ul>]
-A --> D[Description List <dl>]
-A --> E[Nested List]
-B --> F[<li> Items]
-C --> G[<li> Items]
-D --> H[<dt> Term]
-D --> I[<dd> Definition]
-E --> J[Parent List]
-E --> K[Child List (Nested)]
-```
 
 ---
 
