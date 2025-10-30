@@ -110,8 +110,6 @@ console.log(result3);       // 512
 
 4. Use compound operators (`+=`, `-=`, `*=`) to update a variable `x` starting from `10`.
 
-5. Swap two numbers using arithmetic operators only (without using a third variable).
-
 ---
 
 # 🔄 Implicit Type Conversion (Type Coercion) in JavaScript
@@ -273,17 +271,99 @@ console.log(+undefined); // NaN
    console.log("100" / "10");
    ```
 
-3. Create a variable `x = "20"`. Add `10` using:
+---
 
-   * String concatenation
-   * Numeric addition (force conversion).
+# 🏠 **Home Tasks**
 
-4. Use **unary plus** to convert:
+### 🧮 1️⃣ Celsius ➡️ Fahrenheit Converter
 
-   * `"500"` → number
-   * `false` → number
-   * `null` → number
+Create a program that converts **Celsius to Fahrenheit** using the formula:
 
-5. Write a condition using a variable that contains an **empty string**. Check whether it runs or not (Falsy test).
+> Fahrenheit = (Celsius × 9/5) + 32
+
+🧩 **Example Output:**
+
+```
+Celsius: 25°C
+Fahrenheit: 77°F
+```
+
+---
+
+### 🌡️ 2️⃣ Fahrenheit ➡️ Celsius Converter
+
+Create a program that converts **Fahrenheit to Celsius** using the formula:
+
+> Celsius = (Fahrenheit − 32) × 5/9
+
+🧩 **Example Output:**
+
+```
+Fahrenheit: 98°F
+Celsius: 36.67°C
+```
+
+---
+
+### 💰 3️⃣ Simple Interest Calculator
+
+Create a program that calculates **Simple Interest** using the formula:
+
+> Simple Interest = (P × R × T) / 100
+
+Where:
+
+* `P` → Principal amount
+* `R` → Rate of interest
+* `T` → Time (in years)
+
+🧩 **Example Output:**
+
+```
+Principal: 10000
+Rate: 5
+Time: 2 years
+Simple Interest: 1000
+```
+
+---
+
+### ⚖️ 4️⃣ BMI Calculator
+
+Create a program to calculate **Body Mass Index (BMI)** using the formula:
+
+> BMI = Weight / (Height × Height)
+
+🧩 **Example Output:**
+
+```
+Weight: 60 kg
+Height: 1.7 m
+BMI: 20.76
+```
+
+---
+
+### 🧠 5️⃣ Expression Evaluation
+
+Evaluate and print the result of the following expressions 👇
+
+```js
+let result = 10 + 5 * 2;
+let x = (4 + 3) * 2 - 5 / (1 + 1);
+let y = 3 + 2 * 4;
+let a = 10 / 2 + 5 * 3 - 2 ** 3;
+let b = 15 / 3 * 2 + 8 % 3 - 2 ** 2;
+```
+
+🧩 **Output Example:**
+
+```
+result = ?
+x = ?
+y = ?
+a = ?
+b = ?
+```
 
 ---

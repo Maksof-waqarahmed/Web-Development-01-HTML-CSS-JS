@@ -546,9 +546,7 @@ console.log(greeting2);
 
 ---
 
-## 🏆 Challenge Time!
-
-Try to solve these small challenges 👇
+# 🏠 **Home Tasks**
 
 1. Declare three variables using `var`, `let`, and `const`. Print them using `console.log()`.
 2. Create a variable called `city` and assign `"Karachi"`. Reassign it to `"Lahore"`. Try with `let` and `const`. What happens?
@@ -557,12 +555,47 @@ Try to solve these small challenges 👇
 5. Create a variable `sentence2` with the same text using **single quotes** and escaping.
 6. Combine your first name and last name into a `fullName` variable using **both `+` operator** and **template literals**.
 7. Print a sentence: `"Hello, my name is [fullName] and I love coding!"` using template literals.
-8. What will be the output?
-
-   ```js
-   let a;
-   console.log(a); 
-
-   let b = null;
-   console.log(b);
-   ```
+8. Create variables `score1`, `score2`, and `score3`, and assign values (e.g., 50, 75, and 85).
+   Calculate the total score and average score, and assign them to respective variables.
+   Log the total and average scores.
+9. Create a variable `plates` with a value of 30 and another variable `people` with a value of 12.
+    Calculate the remaining plates after distributing equally among people, and store them in a variable.
+    Add 2 to the remaining plates.
+    Create a message variable: `"After distribution, there are (your value here) plates remaining."`
+    Log the message.
+10. Create two variables, `length` and `width`, and assign them values (e.g., 15 and 10).
+    Calculate the area and perimeter of the rectangle, and store them in variables.
+    Log the area and perimeter with appropriate messages.
+11. Create variables `distance` (e.g., 150 km) and `time` (e.g., 3 hours).
+    Calculate the speed (`distance / time`), and assign it to a variable.
+    Create a message variable: `"The average speed is (your value here) km/h."`
+    Log the message.
+12. Create three variables: `item1Price`, `item2Price`, and `item3Price` with values (e.g., 20, 35, and 15).
+    Calculate the total price of all items and assign it to a variable.
+    Add a `discount` variable with a value of 10, and subtract it from the total price.
+    Create a message variable: `"The total price after discount is (your value here)."`
+    Log the message.
+13. Write a program to store your **age** in a variable and print it using `console.log()`.
+    (Example: `My age is: 18`)
+14. Write a program to store your **height** in a variable and print it using `console.log()`.
+    (Example: `My height is: 5.2`)
+15. Write a program to store your **matric percentage** in a variable and print it.
+    (Example: `Matric Percentage is: 88.60`)
+16. Declare two variables, assign some **integer** values, and print their values using `console.log()`.
+    (Example: `The values are 12 and 45.`)
+17. Declare two variables, assign some **float** values, and print their values using `console.log()`.
+    (Example: `The values are 12.56 and 45.89.`)
+18. Declare multiple variables of **string** type, assign individual letters of your name, and concatenate them to print your name.
+    (Example: `Waqar`)
+19. Declare two variables, assign some integer values, calculate their **sum**, and print it.
+    (Example: `The sum of 10 and 20 is 30.`)
+20. Create a string variable `greeting` with the value `"Hello"` and another variable `name` with your name. Concatenate them to create a sentence.
+21. Combine three strings: `"I love"`, `"programming"`, and `"so much!"` into one sentence.
+22. You have two variables: `firstName` and `lastName`. Concatenate them to create a `fullName` and add the phrase `" is learning JavaScript."` to it.
+23. Create a variable `product` with the value `"phone"` and a variable `price` with a numeric value. Concatenate them into a sentence like: `"The phone costs $1000."`
+24. Use string concatenation to join three different types of data: a string, a number, and a boolean.
+25. Create a string with a sentence that spans multiple lines using concatenation.
+26. Use concatenation to create a string that includes double quotes inside it, like: `"Waqar said, "JavaScript is amazing!"`
+27. You have a variable `city` with a value `"New York"`. Concatenate it with a string to say: `"I live in New York."`
+28. Combine the following into a single string: `"Learning"`, `"JavaScript"`, `"is"`, `"fun!"`
+29. Create a variable `day` with a value `"Monday"`. Concatenate it into a string to say: `"Today is Monday and I am coding."`

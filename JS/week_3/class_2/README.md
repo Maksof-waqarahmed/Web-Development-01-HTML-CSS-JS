@@ -125,11 +125,19 @@ console.log(x > 5 && x < 10); // true
 
 ## 📌 3. Control Flow Statements
 
-Conditional statements allow the program to **decide actions** based on conditions.
+A conditional statement in programming is a feature that allows you to perform different actions based on whether a certain condition (or expression) evaluates to true or false. It enables decision-making in your code.
 
 ---
 
-### 🔹 1) `if` Statement
+### 🔹 Types of Conditional Statements:
+
+1) `if` Statement: Executes a block of code if the condition is true.
+
+```js
+if (condition) {
+  // code to execute if condition is true
+}
+```
 
 ```js
 let age = 20;
@@ -140,7 +148,15 @@ if (age >= 18) {
 
 ---
 
-### 🔹 2) `if...else`
+2) `if...else` Statement: Executes one block of code if the condition is true, and another block if the condition is false.
+
+```js
+if (condition) {
+  // code to execute if condition is true
+} else {
+  // code to execute if condition is false
+}
+```
 
 ```js
 let age = 15;
@@ -153,7 +169,17 @@ if (age >= 18) {
 
 ---
 
-### 🔹 3) `if...else if...else`
+3) `if...else if...else` Statement: Allows you to check multiple conditions in sequence.
+
+```js
+if (condition) {
+  // code to execute if condition is true
+} else if (condition) {
+  // code to execute if condition is false
+} else {
+  // code to execute if condition is false
+}
+```
 
 ```js
 let marks = 72;
@@ -171,7 +197,64 @@ if (marks >= 90) {
 
 ---
 
-### 🔹 4) `switch`
+Note: if you have one statement to execute, you can write it in one line or without the curly braces.
+
+one line: 
+```js
+if (condition) statement;
+```
+
+```js
+let age = 20;
+if (age >= 18) console.log("You are an adult.");
+```
+
+without the curly braces:
+```js
+if (condition)
+  statement;
+```
+
+```js
+let age = 20;
+if (age >= 18)
+  console.log("You are an adult.");
+```
+
+---
+
+4) `switch` Statement: Used to comparision to multiple values only used for comparison.
+
+```js
+switch (expression) {
+  case value1:
+    // code to execute if expression === value1
+    break;
+  case value2:
+    // code to execute if expression === value2
+    break;
+  default:
+    // code to execute if expression doesn't match any case
+}
+```
+
+```js
+let day = 3;
+
+switch (day) {
+  case 1: 
+    console.log("Monday"); 
+    break;
+  case 2: 
+    console.log("Tuesday"); 
+    break;
+  case 3: 
+    console.log("Wednesday"); 
+    break;
+  default: 
+    console.log("Invalid day");
+}
+```
 
 ```js
 let day = 3;
@@ -186,62 +269,31 @@ switch (day) {
 
 ---
 
-## 🎯 Challenge 2
+# 🏠 **Home Tasks**
 
-Ask the user for a number between **1–7**, and print the **day of the week**.
-
-```js
-let day = +prompt("Enter a number (1-7):");
-
-switch (day) {
-  case 1: console.log("Monday"); break;
-  case 2: console.log("Tuesday"); break;
-  case 3: console.log("Wednesday"); break;
-  case 4: console.log("Thursday"); break;
-  case 5: console.log("Friday"); break;
-  case 6: console.log("Saturday"); break;
-  case 7: console.log("Sunday"); break;
-  default: console.log("Invalid input");
-}
-```
-
----
-
-# ✅ Summary
-
-✔️ `prompt()` → Always returns string → Convert if number needed.
-✔️ Relational operators compare values → Be careful with `==` vs `===`.
-✔️ `null == undefined` but `null !== undefined`.
-✔️ Relational operators cannot be chained directly → Use `&&`.
-✔️ Conditional statements: `if`, `if-else`, `if-else if`, `switch`.
-
----
-
-# 📝 Assignment Questions
-
-Solve these to practice:
-
-### 🔹 Prompt & Type Conversion
-
-1. Ask the user for their **age** and check if they are **eligible to vote (18+)**.
-2. Take two numbers as input and display their **product**.
-3. Ask the user for their **marks** and display **Pass/Fail**.
-
-### 🔹 Relational Operators
-
-4. Check if a number entered is between **50 and 100** (inclusive).
-5. Compare two numbers and print the **greater one**.
-6. Test and explain difference between:
-
-   ```js
-   console.log("5" == 5);
-   console.log("5" === 5);
-   ```
-
-### 🔹 Control Flow
-
-7. Write a program to assign **grades** based on marks using `if-else if-else`.
-8. Write a program to print the **day of the week** using `switch`.
-9. Ask the user for a number. If it’s even → print `"Even"`, else `"Odd"`.
-
----
+1. Write a program that takes marks of three subjects from the user, stores them in variables, and prints them.
+2. Write a program that takes the price of soap and shampoo from the user, calculates the total price, and prints it.
+3. Write a program that takes the radius of a circle as input, calculates its area, and prints it.
+4. Write a program that takes two numbers from the user and prints their sum, difference, multiplication, division, and remainder.
+5. Write a program that checks if a number is positive, negative, or zero.
+6. Write a program that takes a student’s marks and prints “A” for marks ≥ 90, “B” for marks ≥ 80 and < 90, “C” for marks ≥ 70 and < 80, and “Fail” for marks < 70.
+7. Write a program that checks if a number is even or odd.
+8. Write a program that checks if a person is eligible to drive (age ≥ 18).
+9. Use a switch statement to print the day of the week based on user input (1 for Monday, 7 for Sunday).
+10. Write a program that checks if a year is a leap year.
+11. Write a program to simulate a traffic light system. Input can be "red", "yellow", or "green" and output should be "Stop", "Ready", or "Go".
+12. Write a program that uses a switch statement to check if a number is odd or even.
+13. Write a program that takes two numbers and an operator (+, -, *, /) as input and performs the corresponding operation using a switch statement.
+14. Write a program to take gender as input. If male, print “Good Morning Sir”; if female, print “Good Morning Ma’am.”
+15. Write a program to take input of remaining fuel in a car (in liters). If fuel < 0.25 liters, print “Please refill the fuel in your car.”
+16. Write a program that takes temperature as input and shows a message based on these conditions:
+     a) T > 40 → “It is too hot outside.”
+     b) T > 30 → “The weather today is normal.”
+     c) T > 20 → “Today’s weather is cool.”
+     d) T > 10 → “OMG! Today’s weather is so cool.”
+17. Write a program to check if a person is eligible to vote (age ≥ 18 and citizen = true).
+18. Write a program to check if a customer gets a discount (isMember = true or totalBill > 100).
+19. Write a program that checks user login credentials — print “Invalid credentials” if username or password is incorrect.
+20. Write a program to determine which age group a person belongs to:
+     Child (< 12), Teen (12–17), Adult (18–59), Senior (60+).
+21. Store a secret number (1–10). Ask user to guess. If correct → “Bingo! Correct answer.” If guessed +1 → “Close enough to the correct answer.”
