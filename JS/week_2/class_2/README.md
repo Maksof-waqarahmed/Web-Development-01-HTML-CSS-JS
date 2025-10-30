@@ -306,43 +306,11 @@ Perform the following:
 
 ---
 
-## 🔹 **Task 6: Replace All Vowels**
-
-Take a string from the user (e.g., `"Hello JavaScript"`) and replace **all vowels** with `*`.
-
-🧩 **Output:**
-
-```
-H*ll* J*v*Scr*pt
-```
-
-💡 **Hint:** Use `replaceAll()` or a regular expression `/[aeiou]/gi`.
-
----
-
-## 🔹 **Task 7: Search Keyword in Paragraph**
-
-Given:
-
-```js
-let paragraph = "JavaScript is versatile. I love learning JavaScript because JavaScript is everywhere!";
-```
-
-Count how many times the word `"JavaScript"` appears.
-
-🧩 **Output:**
-
-```
-Word 'JavaScript' found 3 times.
-```
-
----
-
 ## ⭐ **Bonus Challenge (Creative Task)**
 
 Make a program called **"Text Analyzer"**:
 
-1. Take a sentence as input.
+1. Take a sentence.
 2. Show:
 
    * Total characters (`length`)
@@ -358,6 +326,70 @@ Characters: 17
 Words: 3
 Contains "JavaScript": true
 Uppercase: I LOVE JAVASCRIPT
+```
+
+---
+
+## 🏠 **Home Task – JavaScript Strings Practice (Set 2)**
+
+---
+
+## 🔹 **Task 1: Initials Generator**
+
+Create a program that takes a **full name** like `"John Doe"` and prints only the **initials**.
+
+🧩 **Example Output:**
+
+```
+Initials: J.D
+```
+
+---
+
+## 🔹 **Task 2: Hide Email Address**
+
+Given:
+
+```js
+let email = "username@example.com";
+```
+
+Display only the first 3 letters of the username, followed by `***` and the domain.
+
+🧩 **Example Output:**
+
+```
+Email: use***@example.com
+```
+
+---
+
+## 🔹 **Task 3: Reverse a String**
+
+Take a string like `"JavaScript"` and print it in reverse order.
+
+🧩 **Example Output:**
+
+```
+tpircSavaJ
+```
+
+---
+
+## 🔹 **Task 4: Replace Word and Format**
+
+You have this sentence:
+
+```
+"I am learning js at my own pace"
+```
+
+Convert `"js"` to `"JavaScript"` and capitalize the first letter of the sentence.
+
+🧩 **Example Output:**
+
+```
+I am learning JavaScript at my own pace
 ```
 
 ---
