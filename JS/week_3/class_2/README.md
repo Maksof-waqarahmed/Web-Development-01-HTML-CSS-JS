@@ -291,9 +291,4 @@ switch (day) {
      b) T > 30 → “The weather today is normal.”
      c) T > 20 → “Today’s weather is cool.”
      d) T > 10 → “OMG! Today’s weather is so cool.”
-17. Write a program to check if a person is eligible to vote (age ≥ 18 and citizen = true).
-18. Write a program to check if a customer gets a discount (isMember = true or totalBill > 100).
-19. Write a program that checks user login credentials — print “Invalid credentials” if username or password is incorrect.
-20. Write a program to determine which age group a person belongs to:
-     Child (< 12), Teen (12–17), Adult (18–59), Senior (60+).
-21. Store a secret number (1–10). Ask user to guess. If correct → “Bingo! Correct answer.” If guessed +1 → “Close enough to the correct answer.”
+17. Store a secret number (1–10). Ask user to guess. If correct → “Bingo! Correct answer.” If guessed +1 → “Close enough to the correct answer.”
