@@ -267,6 +267,43 @@ switch (day) {
 }
 ```
 
+```js
+const city = "Karachi";
+
+switch (city) {
+  case "Karachi":
+  case "Lahore":
+  case "Islamabad":
+  case "Sukkur":
+    console.log(`${city} city is in Pakistan`);
+    break;
+
+  default:
+    console.log(`${city} city is not in Pakistan`);
+}
+```
+
+5) Ternary Operator: Short form of if...else. Do not go more than 1 level.
+
+```js
+condition ? statement1 : statement2;
+```
+
+```js
+let age = 15;
+age >= 18 ? console.log("You can vote.") : console.log("You cannot vote.");
+```
+
+```js
+// ❌ Avoid nesting more than one level, but for learning purpose:
+let age2 = 15;
+age2 >= 18
+  ? console.log("You can vote.")
+  : age2 < 18
+  ? console.log("You are a minor.")
+  : console.log("You are a child.");
+```
+
 ---
 
 # 🏠 **Home Tasks**
