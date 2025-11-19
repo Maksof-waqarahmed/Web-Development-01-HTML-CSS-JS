@@ -1,497 +1,355 @@
-# 🧩 **Functions in JavaScript — Complete Guide**
+## 📘 **Execution Context in JavaScript**
 
 ---
 
-## 📌 **1. What is a Function?**
+## 📘 **Lexical Environment**
 
-A **function** is a **reusable block of code** designed to perform a specific task. Functions allow you to **avoid repetition** by grouping commonly used logic and calling it whenever needed.
+### 🔷 **What Does “Lexical” Mean?**
 
-* **Benefits of Functions**:
+The word **lexical** comes from the word **“lexicon”**, meaning:
 
-  * Reusability
-  * Readability
-  * Maintainability
-  * Reduces code duplication
+✔ related to **words** <br>
+✔ related to **how something is written** <br>
+✔ related to **placement** <br>
 
-**Visual Representation:**
-
-<img src="./images/img1.PNG" alt="Function">  
-<img src="./images/img2.PNG" alt="Function">
+In JavaScript, **lexical means where your code sits physically in the file**.
 
 ---
 
-### 🔹 **Syntax**
+### 🔷 **What Is a Lexical Environment?**
+
+A **Lexical Environment** is:
+
+> **The place where a piece of code physically lives + the variables it can access + a reference to its outer environment.**
+
+Every time JavaScript executes code, it creates a **lexical environment** containing:
+
+## 🔷 **Understanding the Word “Context” First**
+
+Before learning **Execution Context**, understand the meaning of the word **context**.
+
+### ✔ What is Context?
+
+> “Context” means the **circumstances**, **environment**, or **background information** that help an event happen.
+
+### 🔍 Example
+
+If someone says:
+
+> “I scored low in the test.”
+
+You ask:
+
+> “In what context?”
+
+You want to know:
+
+* What happened?
+* What were the conditions?
+* What was the situation?
+
+So **context gives extra information**.
+
+### ✔ Connecting This to JavaScript
+
+Similarly:
+
+> **Execution Context gives extra information about the code that is currently running and everything around it that helps JavaScript execute that code.**
+
+---
+
+## 🔷 **Definition of Execution Context**
+
+### ✔ Simple Definition:
+
+> **Execution Context means: the code that is currently running + everything needed to run it (variables, functions, scope, memory, `this`, etc.).**
+
+JS creates this environment automatically before executing your code.
+
+---
+
+## 🔷 **Global Execution Context (GEC)**
+
+When any JavaScript program starts, JavaScript automatically creates:
+
+> **Global Execution Context (GEC)**
+
+### ✔ What is Global?
+
+Global = everything outside any function.
+
+Even if your JS file contains **0 lines**, JS creates:
+
+* `window` object → global object
+* `this` keyword → pointing to `window`
+* global memory
+* global scope
+
+### ✔ Example
+
+Even if your JS file is empty:
 
 ```js
-function functionName() {
-    // code to execute
+// empty
+```
+
+Opening it in the browser console and typing `this` gives you:
+
+```
+window { ... }
+```
+
+This proves JS already created **Execution Context**.
+
+---
+
+## 🔷 **`this` in Global Execution Context**
+
+JS gives a special keyword:
+
+```
+this
+```
+
+In Global Execution Context:
+
+```
+this === window   // true (in browser)
+```
+
+Because both point to the **same memory location**.
+
+**Diagram**
+
+<img src="./images/img1.PNG" alt="GEC Diagram">
+
+---
+
+## 🔷 **Two Phases of Global Execution Context**
+
+The GEC has **two phases**:
+
+---
+
+### ⭐ **1) Creation Phase**
+
+In this phase:
+
+1. Variables are initialized with **undefined**
+2. Functions are stored in memory
+
+Example:
+
+```js
+var name = "Waqar";
+function sayName() {
+    console.log("The name is " + this.name);
 }
 ```
 
-**Example:**
+### ✔ Creation Phase Memory:
+
+<img src="./images/img10.PNG" alt="GEC Diagram">
+
+---
+
+### ⭐ **2) Execution Phase**
+
+Now JS runs your code line-by-line:
+
+1. Assigns actual values
+
+   ```
+   name = "Waqar"
+   ```
+2. Skips running `sayName()` because it is **not called yet**
+
+Execution happens only when JS **encounters** the function call.
+
+---
+
+## 🔷 **When You Call a Function → Function Execution Context (FEC)**
+
+Calling:
 
 ```js
-function print() {
-    console.log("My Name is Waqar Rana");
-}
+sayName();
+```
 
-print(); // Calls the function
+creates:
+
+> **Function Execution Context (FEC)**
+
+Every function has **its own Execution Context**.
+
+---
+
+## ⭐ **FEC Phases**
+
+FEC also has **two phases**:
+
+---
+
+### 🔵 **1) Creation Phase of Function Execution Context**
+
+In this phase JS:
+
+1. parameters = **undefined**
+2. local variables = **undefined**
+3. inner functions = stored in memory
+
+---
+
+### 🔵 **2) Execution Phase of FEC**
+
+Now JS runs the function.
+
+Example:
+
+```js
+function sayName() {
+    console.log("The name is " + this.name);
+}
+sayName();
+```
+
+Execution phase:
+
+✔ Runs `console.log`
+✔ Prints:
+
+```
+The name is Waqar
 ```
 
 ---
 
-## 📌 **2. Function Declaration**
+## 🔷 **Call Stack (Execution Stack)**
 
-A **function declaration** defines a function using the `function` keyword.
-It is **hoisted**, meaning it can be called **before or after** its declaration in the code.
+JavaScript uses a **stack** (LIFO) to manage all Execution Contexts.
 
-```js
-console.log(sum(2, 3)); // 5
+### ✔ Order:
 
-function sum(a, b) {
-    return a + b;
-}
-```
-
-* **Hoisting**: Function declarations are loaded into memory at runtime before execution.
+1. Global Execution Context (GEC) is created → pushed first
+2. When a function is called → FEC pushed
+3. When function ends → its FEC removed
+4. When program ends → GEC removed
 
 ---
 
-## 📌 **3. Function Definition**
-
-The **function definition** is the actual code that runs inside the function.
+## 🔷 **Example**
 
 ```js
-function greet(name) {
-    return "Hello " + name;
-}
+console.log("Inside Global Execution Context");
 
-console.log(greet("Waqar")); // Hello Waqar
-```
+var a = 5;
 
----
+function testMe() {
 
-## 📌 **4. Calling / Invoking a Function**
+    console.log("Inside testMe Execution context");
 
-To **execute a function**, use its name followed by parentheses:
+    var b = 10;
 
-```js
-function printName() {
-    console.log("Hello!");
-}
+    var user = {
+        name: "Waqar Rana",
+        country: "Pakistan"
+    };
 
-printName(); // Calls the function
-```
-
----
-
-## 📌 **5. Parameters & Arguments**
-
-### 🔹 Parameters
-
-* Variables defined **inside function parentheses**
-* Act as placeholders for input values
-
-```js
-function print(name) {
-    console.log("My Name is " + name);
-}
-```
-
-### 🔹 Arguments
-
-* Actual values **passed to the function** when called
-
-```js
-print("Waqar Rana");
-```
-
-**Example with addition:**
-
-```js
-function sum(a, b) {
-    console.log(a + b);
-}
-
-sum(1, 2); // 3
-```
-
----
-
-## 📌 **6. Return Statement**
-
-The `return` statement **sends a value back** to the function caller.
-
-```js
-function sum(a, b) {
-    return a + b;
-}
-
-const result = sum(2, 3);
-console.log(result); // 5
-```
-
-**Example with further use:**
-
-```js
-function double(num) {
-    return num * 2;
-}
-
-console.log(double(result)); // 10
-```
-
----
-
-## 📌 **7. Default Parameters**
-
-* Provide default values if arguments are **not supplied**
-
-```js
-function calc(a, b = 0) {
-    return 2 * (a + b);
-}
-
-console.log(calc(1));   // 2
-console.log(calc(1, 2)); // 6
-```
-
----
-
-## 📌 **8. Rest Parameters**
-
-* **Collects all remaining arguments** into an array
-* Must always be **last parameter**
-
-```js
-function calc(...numbers) {
-    console.log(numbers);
-}
-
-calc(1, 2, 3, 4); // [1, 2, 3, 4]
-```
-
-```js
-function calc(x, y, ...rest) {
-    console.log(x, y, rest);
-}
-
-calc(1, 2, 3, 4, 5); // 1 2 [3, 4, 5]
-```
-
-⚠ **Rule:** Cannot use rest parameter at the start or middle.
-
----
-
-## 📌 **9. Nested Functions**
-
-A **nested function** is defined inside another function.
-
-* Can only be called **inside the outer function** unless returned.
-
-```js
-function outer() {
-    console.log("Outer function");
-
-    function inner() {
-        console.log("Inner function");
+    function testAgain() {
+        console.log("Inside testAgain Execution Context");
+        console.log("Exiting testAgain Execution Context");
     }
 
-    inner(); // Inner function called here
+    testAgain();
+
+    console.log("Exiting testMe execution context");
 }
 
-outer();
-```
+testMe();
 
-**Returning inner function for external access:**
-
-```js
-function outer() {
-    return function inner() {
-        console.log("Inner function");
-    }
-}
-
-const retFunc = outer();
-retFunc(); // Inner function
+console.log("Exiting Global Execution Context");
 ```
 
 ---
 
-## 📌 **10. Callback Functions**
-
-A **callback function** is a function passed as an argument to another function and called at a later time.
-
-```js
-function print(func) {
-    console.log("My Name is Waqar Rana");
-    func();
-}
-
-print(function() {
-    console.log("I am a callback function");
-});
-```
-
-**Named callback example:**
-
-```js
-function callback() {
-    console.log("I am a callback function");
-}
-
-print(callback);
-```
-
-* Can include **conditions** to call callback:
-
-```js
-let isCallbackCalled = true;
-
-function print(func) {
-    console.log("My Name is Waqar Rana");
-    if(isCallbackCalled) {
-        func();
-    }
-}
-
-print(callback);
-```
+## 🔥 Step-by-Step Execution (with Call Stack Diagrams)
 
 ---
 
-## 📌 **11. Pure Functions vs Side Effects**
+<img src="./images/img2.PNG" alt="GEC Diagram"> <span> <img src="./images/img3.PNG" alt="GEC Diagram"> </span>
 
-### 🔹 Pure Function
+### ✔ Step 1: GEC Creation Phase
 
-* Always returns **same output** for same input
-* **Does not modify external state**
+<img src="./images/img9.PNG" alt="GEC Diagram">
+
+<img src="./images/img2.PNG" alt="GEC Diagram"> <span> <img src="./images/img4.PNG" alt="GEC Diagram"> </span>
+
+### ✔ Step 2: GEC Execution Phase
+
+<img src="./images/img2.PNG" alt="GEC Diagram"> <span> <img src="./images/img5.PNG" alt="GEC Diagram"> </span>
+
+### ✔ Step 3: FEC (testMe) Creation Phase
+
+<img src="./images/img2.PNG" alt="GEC Diagram"> <span> <img src="./images/img6.PNG" alt="GEC Diagram"> </span>
+
+### ✔ Step 4: FEC (testMe) Execution Phase
+
+<img src="./images/img2.PNG" alt="GEC Diagram"> <span> <img src="./images/img7.PNG" alt="GEC Diagram"> </span>
+
+### ✔ Step 5: FEC (testAgain) Creation Phase
+
+<img src="./images/img2.PNG" alt="GEC Diagram"> <span> <img src="./images/img7.PNG" alt="GEC Diagram"> </span>
+
+### ✔ Step 6: FEC (testAgain) Execution Phase
+
+<img src="./images/img2.PNG" alt="GEC Diagram"> <span> <img src="./images/img7.PNG" alt="GEC Diagram"> </span>
+
+---
+
+How Comeout from stack?
+
+step 01:
+
+<img src="./images/img11.PNG" alt="GEC Diagram">
+
+step 02:
+
+<img src="./images/img8.PNG" alt="GEC Diagram">
+<img src="./images/img12.PNG" alt="GEC Diagram">
+
+step 03:
+
+<img src="./images/img9.PNG" alt="GEC Diagram">
+
+---
+
+## 🔥 Home Task:
+
+Draw the execution context diagram of the following code and share as explained below.
 
 ```js
-function greet(name) {
-    return "Hello " + name;
+const message = "I can do it";
+
+fucntion sum(a, b) {
+    const result = a + b;
+    return result;
 }
 
-console.log(greet("Waqar Rana")); // Hello Waqar Rana
-```
-
-### 🔹 Side Effects
-
-* Function **depends on external state** or modifies it
-
-```js
-let greetingMsg = "Hello ";
-
-function greet(name) {
-    return greetingMsg + name;
+function mul(a, b) {
+    const result = a * b;
+    return result;
+}
+function calc(a, b) {
+    return (sum(a, b) + mul(a,b))/2;
 }
 
-greetingMsg = "Hi ";
-console.log(greet("Waqar Rana")); // Hi Waqar Rana
-```
-
----
-
-## 📌 **12. Higher Order Functions**
-
-* Function that **takes another function as argument** or **returns a function**
-
-```js
-function calc(a, b, operator) {
-    return operator(a, b);
+function getResult(a, b) {
+    return calc(a, b);
 }
 
-function add(a, b) { return a + b; }
-
-console.log(calc(1, 2, add)); // 3
+getResult(8, 5);
 ```
 
-**Returning a function:**
-
-```js
-function returnFunc() {
-    return function() {
-        console.log("I am a returned function");
-    }
-}
-
-const retFunc = returnFunc();
-retFunc();
-```
-
-### 🔹 Callback vs Higher Order Function
-
-| Feature    | Callback Function            | Higher Order Function                    |
-| ---------- | ---------------------------- | ---------------------------------------- |
-| Definition | Passed to another function   | Takes or returns a function              |
-| Purpose    | Executed later in the caller | Can manipulate or return other functions |
-| Example    | `print(callback)`            | `calc(a,b, operator)`                    |
-
----
-
-## 📌 **13. Arrow Functions**
-
-* Compact function syntax
-* Implicit return if only one expression
-* Optional parentheses for **single parameter**
-
-```js
-const add = (a, b) => a + b;
-console.log(add(1, 2)); // 3
-
-const greet = name => "Hello " + name;
-console.log(greet("Waqar")); // Hello Waqar
-```
-
-```js
-const logMessage = () => console.log("I am arrow function");
-logMessage();
-```
-
----
-
-## 📌 **14. IIFE (Immediately Invoked Function Expression)**
-
-* Function **executes immediately** after creation
-
-```js
-(function() {
-    console.log("I am IIFE");
-})();
-```
-
-**With parameters:**
-
-```js
-(function(a, b) {
-    console.log(a + b);
-})(1, 2); // 3
-```
-
----
-
-## 📌 **15. Call Stack**
-
-* JavaScript uses a **stack (LIFO)** to track function execution
-* Each function call is **pushed** onto the stack
-* After execution, it is **popped off**
-
-**Example:**
-
-```js
-function f1() {}
-function f2() { f1(); }
-f2();
-```
-
-**Visual diagram:** 
-<img src="./images/img3.PNG" alt="Call Stack">
-
-**Step by step execution:**
-
-<img src="./images/img4.PNG" alt="Call Stack">
-
-<img src="./images/img5.PNG" alt="Call Stack">
-
-<img src="./images/img6.PNG" alt="Call Stack">
-
-<img src="./images/img7.PNG" alt="Call Stack">
-
-<img src="./images/img8.PNG" alt="Call Stack">
-
-<img src="./images/img9.PNG" alt="Call Stack">
-
-<img src="./images/img10.PNG" alt="Call Stack">
-
-<img src="./images/img11.PNG" alt="Call Stack">
-
-<img src="./images/img12.PNG" alt="Call Stack">
-
-<img src="./images/img11.PNG" alt="Call Stack">
-
-<img src="./images/img10.PNG" alt="Call Stack">
-
-<img src="./images/img9.PNG" alt="Call Stack">
-
----
-
----
-
-## 📌 **16. Recursion**
-
-* Function **calling itself**
-* Needs **base condition** to stop recursion
-* Memory cost due to stack
-
-```js
-function fetchWater(count) {
-    console.log("Fetching water", count);
-
-    if(count === 0) {
-        console.log("Water fetched successfully");
-        return;
-    }
-
-    fetchWater(count - 1);
-}
-
-fetchWater(5);
-```
-
-**Infinite recursion causes stack overflow:**
-
-```js
-function infinite() {
-    infinite();
-}
-```
-
----
-
-## 📌 **17. Loop vs Recursion**
-
-| Feature     | Loop             | Recursion                    |
-| ----------- | ---------------- | ---------------------------- |
-| Memory      | Reuses memory    | Stack memory increases       |
-| Readability | Simple           | Good for tree/DFS structures |
-| Use case    | Repetitive tasks | Hierarchical/recursive tasks |
-| Risk        | Low              | Stack overflow if no base    |
-
----
-
-## Home Tasks
-
-1. Convert Celsius → Fahrenheit
-2. Find Maximum of Two Numbers
-3. Check Palindrome String
-4. Factorial of Number
-5. Count Vowels in String
-6. Capitalize First Letter of Each Word
-7. IIFE to print “Hello, JavaScript!”
-8. Create a simple callback function
-9. Call Stack diagram examples
-10. Calculate area of rectangle (regular, anonymous, arrow)
-11. Process numbers with callback
-12. Anonymous function: even/odd
-13. Arrow function: Positive/Negative/Zero
-14. IIFE to print current date
-15. Callback inside loop executed each iteration
-16. Write a function to reverse a string
-17. Write a function to check if a number is prime
-18. Write a recursive function to sum all elements of an array
-19. Write a function to flatten a nested array
-20. Write a function to remove duplicates from an array
-21. Write a function that returns the Fibonacci sequence up to n
-22. Write a function to merge two arrays and sort them
-23. Write an arrow function to calculate square of numbers in an array using `map`
-24. Write a function to simulate a simple calculator using callbacks
-
-
-
-
-
-
-
-
-
-
+Create the GEC and FEC with CP and EP flow <br>
+Create the Stack and Heap Flow <br>
+Create the Stack Diagram <br>
