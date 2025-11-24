@@ -1,8 +1,8 @@
-# 🧩 **Functions in JavaScript — Complete Guide**
+# 🧩 **Functions in JavaScript**
 
 ---
 
-## 📌 **1. What is a Function?**
+## 📌 **What is a Function?**
 
 A **function** is a **reusable block of code** designed to perform a specific task. Functions allow you to **avoid repetition** by grouping commonly used logic and calling it whenever needed.
 
@@ -40,7 +40,7 @@ print(); // Calls the function
 
 ---
 
-## 📌 **2. Function Declaration**
+## 📌 **Function Declaration**
 
 A **function declaration** defines a function using the `function` keyword.
 It is **hoisted**, meaning it can be called **before or after** its declaration in the code.
@@ -57,7 +57,7 @@ function sum(a, b) {
 
 ---
 
-## 📌 **3. Function Definition**
+## 📌 **Function Definition**
 
 The **function definition** is the actual code that runs inside the function.
 
@@ -71,7 +71,7 @@ console.log(greet("Waqar")); // Hello Waqar
 
 ---
 
-## 📌 **4. Calling / Invoking a Function**
+## 📌 **Calling / Invoking a Function**
 
 To **execute a function**, use its name followed by parentheses:
 
@@ -85,7 +85,7 @@ printName(); // Calls the function
 
 ---
 
-## 📌 **5. Parameters & Arguments**
+## 📌 **Parameters & Arguments**
 
 ### 🔹 Parameters
 
@@ -118,7 +118,7 @@ sum(1, 2); // 3
 
 ---
 
-## 📌 **6. Return Statement**
+## 📌 **Return Statement**
 
 The `return` statement **sends a value back** to the function caller.
 
@@ -143,7 +143,7 @@ console.log(double(result)); // 10
 
 ---
 
-## 📌 **7. Default Parameters**
+## 📌 **Default Parameters**
 
 * Provide default values if arguments are **not supplied**
 
@@ -158,7 +158,7 @@ console.log(calc(1, 2)); // 6
 
 ---
 
-## 📌 **8. Rest Parameters**
+## 📌 **Rest Parameters**
 
 * **Collects all remaining arguments** into an array
 * Must always be **last parameter**
@@ -183,7 +183,7 @@ calc(1, 2, 3, 4, 5); // 1 2 [3, 4, 5]
 
 ---
 
-## 📌 **9. Nested Functions**
+## 📌 **Nested Functions**
 
 A **nested function** is defined inside another function.
 
@@ -218,7 +218,7 @@ retFunc(); // Inner function
 
 ---
 
-## 📌 **10. Callback Functions**
+## 📌 **Callback Functions**
 
 A **callback function** is a function passed as an argument to another function and called at a later time.
 
@@ -260,7 +260,7 @@ print(callback);
 
 ---
 
-## 📌 **11. Pure Functions vs Side Effects**
+## 📌 **Pure Functions vs Side Effects**
 
 ### 🔹 Pure Function
 
@@ -292,7 +292,7 @@ console.log(greet("Waqar Rana")); // Hi Waqar Rana
 
 ---
 
-## 📌 **12. Higher Order Functions**
+## 📌 **Higher Order Functions**
 
 * Function that **takes another function as argument** or **returns a function**
 
@@ -329,7 +329,7 @@ retFunc();
 
 ---
 
-## 📌 **13. Arrow Functions**
+## 📌 **Arrow Functions**
 
 * Compact function syntax
 * Implicit return if only one expression
@@ -350,7 +350,7 @@ logMessage();
 
 ---
 
-## 📌 **14. IIFE (Immediately Invoked Function Expression)**
+## 📌 **IIFE (Immediately Invoked Function Expression)**
 
 * Function **executes immediately** after creation
 
@@ -370,22 +370,11 @@ logMessage();
 
 ---
 
-## 📌 **15. Call Stack**
+## 📌 **Call Stack or Function Execution Stack**
 
 * JavaScript uses a **stack (LIFO)** to track function execution
 * Each function call is **pushed** onto the stack
 * After execution, it is **popped off**
-
-**Example:**
-
-```js
-function f1() {}
-function f2() { f1(); }
-f2();
-```
-
-**Visual diagram:** 
-<img src="./images/img3.PNG" alt="Call Stack">
 
 **Step by step execution:**
 
@@ -417,7 +406,7 @@ f2();
 
 ---
 
-## 📌 **16. Recursion**
+## 📌 **Recursion**
 
 * Function **calling itself**
 * Needs **base condition** to stop recursion
@@ -448,7 +437,7 @@ function infinite() {
 
 ---
 
-## 📌 **17. Loop vs Recursion**
+## 📌 **Loop vs Recursion**
 
 | Feature     | Loop             | Recursion                    |
 | ----------- | ---------------- | ---------------------------- |
