@@ -22,7 +22,7 @@ A **Lexical Environment** is:
 
 > **The place where a piece of code physically lives + the variables it can access + a reference to its outer environment.**
 
-Every time JavaScript executes code, it creates a **lexical environment** containing:
+Every time JavaScript executes code, it creates a **lexical environment**
 
 ## 🔷 **Understanding the Word “Context” First**
 
